@@ -1,0 +1,3 @@
+merci de saisir une nom
+ nom utilisateur = ddd
+ Entrez un nombre a 

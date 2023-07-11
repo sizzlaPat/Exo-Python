@@ -1,0 +1,18 @@
+import pytz, os
+from datetime import datetime,timedelta, timezone
+import time
+
+if __name__=='__main__':
+    print ("Decalage horaire : \n(Africa/Douala) <----> (Europe/Paris)")
+    while(1):
+        
+    
+        utc_dt = datetime.now(timezone.utc)
+        paris = pytz.timezone("Europe/Paris")
+        douala = pytz.timezone("Africa/Douala")
+        print("Decalage horaire : (Douala) ", utc_dt.astimezone(douala).strftime("%H:%m:%S")," <----> (Europe/Paris):",utc_dt.astimezone(paris).strftime("%H:%m:%S"))
+        time.sleep(1)
+       
+        print("")
+        print("\r")
+        os.system("cls")
