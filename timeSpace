@@ -1,0 +1,25 @@
+import pytz
+from datetime import datetime,timedelta, timezone
+
+if __name__=='__main__':
+    
+    date_string= "21/05/2023"
+    print("date_string =", date_string)
+    print("type de date_string =", type(date_string) )
+    date_object = datetime.strptime(date_string, "%d/%m/%Y")
+    print("date_object =", date_object)
+    print("type de date_object =", type(date_object) )
+    
+    ini_time_for_now = datetime.now()
+    print ("initial_date", str(ini_time_for_now))
+    future_date_after_2yrs = ini_time_for_now - timedelta(days = 730)
+    future_date_after_2days = ini_time_for_now + timedelta(days = 2)
+    print('future_date_after_2yrs:', str(future_date_after_2yrs))
+    print('future_date_after_2days:', str(future_date_after_2days))
+    
+    utc_dt = datetime.now(timezone.utc)
+    paris = pytz.timezone("Europe/Paris")
+    Moscow = pytz.timezone("Europe/Moscow")
+    print("Paris time {}".format(utc_dt.astimezone(paris).isoformat()))
+    print("Moscow time {}".format(utc_dt.astimezone(Moscow).isoformat()))
+    

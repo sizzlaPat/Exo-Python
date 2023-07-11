@@ -1,0 +1,22 @@
+import json
+if __name__=='__main__':
+    # écrire dans fichier
+    if __name__=='__main__':
+        fichier1 = open("file.txt", "w+")
+    if fichier1 :
+        print("votre fichier est ouvert")
+    fichier1.write("test2 toto .com")
+    fichier1.close()
+    
+    # lire le contenu d'un fichier
+    f = open("file.txt", "r")
+    print(f.read())
+    print(f.readline())
+    f.close()
+    
+    # Loading a JSON File to a Python Dictionary
+    #my-file.json content {}
+    
+    with open('my-file.json', 'r') as file:
+     data = json.load(file)
+    print(data)
